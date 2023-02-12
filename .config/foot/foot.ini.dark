@@ -1,0 +1,21 @@
+font=JetBrainsMono:pixelsize=12
+[colors]
+foreground=D0D0D0 # Text
+background=151515 # Base
+regular0=151515   # Surface 1
+regular1=AC4142   # red
+regular2=90A959   # green
+regular3=F4BF75   # yellow
+regular4=6A9FB5   # blue
+regular5=AA759F   # pink
+regular6=75B5AA   # teal
+regular7=D0D0D0   # Subtext 1
+bright0=505050    # Surface 2
+bright1=AC4142    # red
+bright2=90A959    # green
+bright3=F4BF75    # yellow
+bright4=6A9FB5    # blue
+bright5=AA759F    # pink
+bright6=75B5AA    # teal
+bright7=F5F5F5    # Subtext 0
+alpha=0.90

@@ -1,0 +1,53 @@
+#!/bin/sh
+BEMENU="bemenu -i -B 2 -W 0.5 -l 15 --center --tb #1e1e2e --tf #cdd6f4 --fb #11111b --ff #cdd6f4 --nb #11111b --nf #cdd6f4 --hb #1e1e2e --hf #cdd6f4 --ab #11111b --af #cdd6f4 --bdr #313244"
+function upmenu {
+        options="Upload a File\nRecent Uploads"
+        selected=$(echo -e $options | $BEMENU )
+		if [[ "$selected" == "Upload a File" ]]; then
+		
+		target="$1"
+		[ -z "$target" ] && target="$(realpath .)"
+
+ls() {
+        echo ..
+        command ls -ALpX1 --group-directories-first "$target"
+}
+
+		while :; do
+		        sel="$(ls | $BEMENU)" || exit
+		        if [ "$(echo "$sel")" = "/" ]; then
+		                newt="$sel"
+		        else
+		                newt="$(realpath "$target/$sel")"
+		        fi
+		        if [ -e "$newt" ]; then
+		                target="$newt"
+		                if [ ! -d "$target" ]; then
+		                        echo "Location: $target"
+								command="curl -s -F'file=@$target' https://0x0.st"
+               					echo "Executing: $command"
+
+               					url=$(eval $command)
+              					echo "URL: $url"
+
+              					printf "$url" | wl-copy
+             					notify-send "File Uploaded" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/scripts/icon.png"
+
+               					entry="$(date '+%d-%m-%y-%H:%M:%S')    $url    $(echo $target | awk -F'/' '{print $(NF)}')"
+             					echo $entry >> $HOME/.0x0_list
+             					echo "Uploaded"; break
+		                fi
+		        fi
+		done
+		elif [[ "$selected" == "Recent Uploads" ]]; then
+                    var=$(tac ~/.0x0_list | $BEMENU)
+                    filename=$(echo $var | awk '{print $3}')
+                    url=$(echo $var | awk '{print $2}')
+                    printf "$url" | wl-copy
+                    notify-send "$filename" "URL: $url \ncopied to clipboard" -t 5000 -i "$HOME/scripts/icon.png"
+		elif [[ "$selected" == "Voltar" ]]; then
+					exit
+				fi
+}
+
+upmenu

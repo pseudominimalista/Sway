@@ -1,0 +1,4 @@
+#!/bin/sh
+notify-send "Download iniciado"
+yt-dlp $(wl-paste) &&
+notify-send "Download concluído"

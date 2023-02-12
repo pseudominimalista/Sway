@@ -1,0 +1,28 @@
+include palette
+
+### Paleta de cores
+
+# target                 title     bg    text   indicator  border
+client.focused           $4        $4    $0     $4         $4
+client.focused_inactive  $8        $0    $7     $8         $8
+client.unfocused         $8        $0    $7     $8         $8
+client.background        $0
+
+### Barra
+
+bar {
+    position top
+    
+    status_command while echo $(date +'%d/%m/%Y | %I:%M')\ \|\ $(cat /sys/class/power_supply/BAT0/capacity)%\ ; do sleep 1m; done
+	
+    colors {
+        statusline $7
+        background $0
+        focused_workspace $4 $4 $0
+        inactive_workspace $0 $0 $7
+    }
+}
+
+### Wallpaper
+#exec_always killall swaybg
+#output * bg wall fill

@@ -1,0 +1,182 @@
+set $mod Mod4
+set $term foot
+set $web librewolf
+set $filemanager thunar
+set $nag swaynag --button-padding 0 --message-padding 0 --button-gap 0 --border-bottom-size 0 --text \#cdd6f4 --button-text \#1e1e2e --background \#1e1e2e --border-bottom \#1e1e2e --border \#f38ba8 --button-background \#f38ba8 -s 'Não.' -t warning -m
+set $lock swaylock -f -c \#1e1e2e --inside-color \#1e1e2e --line-color \#1e1e2e --line-wrong-color \#1e1e2e --line-clear-color \#1e1e2e --line-caps-lock-color \#1e1e2e --line-ver-color \#1e1e2e --text-color \#1e1e2e --text-caps-lock-color \#fab387 --text-clear-color \#cdd6f4 --text-wrong-color \#cdd6f4 --text-ver-color \#cdd6f4 --ring-color \#1e1e2e --ring-clear-color \#1e1e2e --inside-clear-color \#1e1e2e --bs-hl-color \#f38ba8 --key-hl-color \#a6e3a1 --ring-ver-color \#a6e3a1 --inside-ver-color \#1e1e2e --ring-wrong-color \#f38ba8 --inside-wrong-color \#1e1e2e 
+set $idle swayidle -w timeout 300 '$lock' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' before-sleep '$lock'
+set $bemenu bemenu-run -i -B 2 -W 0.5 -l 15 --center --tb \#1e1e2e --tf \#cdd6f4 --fb \#11111b --ff \#cdd6f4 --nb \#11111b --nf \#cdd6f4 --hb \#1e1e2e --hf \#cdd6f4 --ab \#11111b --af \#cdd6f4 --bdr \#313244
+exec $idle
+
+### Touchpad
+
+    input "1267:12734:MSFT0001:01_04F3:31BE_Touchpad" {
+           dwt enabled
+           tap enabled
+           natural_scroll enabled
+           middle_emulation enabled
+    }
+
+### Gestos
+
+    bindgesture swipe:left workspace prev
+    bindgesture swipe:right workspace next
+    bindgesture pinch:inward+up move up
+    bindgesture pinch:inward+down move down
+    bindgesture pinch:inward+left move left
+    bindgesture pinch:inward+right move right
+
+### Teclado
+
+    input "1:1:AT_Translated_Set_2_keyboard" {
+	   xkb_layout br
+    }
+
+    input "6700:8384:USB_USB_Keyboard" {
+	   xkb_layout br
+    }
+
+### Teclas de atalho
+
+    # Abrir terminal
+    bindsym $mod+Return exec $term
+    bindcode 135 exec $term
+
+    # Abrir navegador
+    bindsym $mod+w exec $web
+
+    # Fechar janela
+    bindsym $mod+q kill
+
+    # bemenu
+    bindsym $mod+r exec $bemenu
+    bindsym $mod+p exec $bemenu
+
+    # bemenu scripts
+    bindsym $mod+i exec wifi
+    bindsym $mod+b exec wp
+    bindsym $mod+u exec up
+    bindsym $mod+y exec ytdown
+    bindsym $mod+semicolon exec emj
+
+    # Abrir gerenciador de arquivos
+    bindsym $mod+e exec $filemanager
+
+    # Reiniciar sway
+    bindsym $mod+Alt+r reload
+
+    # Volume e brilho
+    bindsym XF86AudioRaiseVolume exec amixer set Master 1000+
+    bindsym XF86AudioLowerVolume exec amixer set Master 1000-
+    bindsym XF86AudioMute exec amixer set Master toggle
+    bindsym XF86MonBrightnessUp exec brightnessctl s 3%+
+    bindsym XF86MonBrightnessDown exec brightnessctl s 3%-
+    bindsym $mod+F3 exec amixer set Master 1000+
+    bindsym $mod+F2 exec amixer set Master 1000-
+    bindsym $mod+F1 exec amixer set Master toggle
+    bindsym $mod+F12 exec brightnessctl s 3%+
+    bindsym $mod+F11 exec brightnessctl s 3%-
+
+    # Abrir pulsemixer
+    for_window [title="mixer"] floating enable, resize set 480px 300px, move position center
+    bindsym $mod+m exec foot -T mixer pulsemixer
+
+    # Screenshot
+    bindsym Print exec grim
+    bindsym Shift+Print exec grim -g "$(slurp)"
+
+    # Gravar tela
+    bindsym Ctrl+Shift+Print exec $term wf-recorder -a -f out.mkv
+
+    # cmus
+    bindsym $mod+c exec foot cmus
+
+    # Controlar o cmus
+    bindcode 172 exec cmus-remote -u
+    bindcode 174 exec cmus-remote -s
+    bindcode 173 exec cmus-remote -r
+    bindcode 171 exec cmus-remote -n
+    bindcode 209 exec cmus-remote -u
+    bindcode 208 exec cmus-remote -u
+
+    # Bloquear a tela
+    bindsym $mod+l exec $lock
+
+    # Sair do sway
+    bindsym $mod+Alt+q exec $nag 'Você realmente quer sair do sway?' -B 'Sim.' 'swaymsg exit' 
+
+    # Reiniciar computador
+    bindsym $mod+Ctrl+r exec $nag 'Você realmente quer reiniciar o computador?' -B 'Sim.' 'reboot'
+
+    # Desligar computador
+    bindsym $mod+Ctrl+q exec $nag 'Você realmente quer desligar o computador?' -B 'Sim.' 'poweroff'
+
+### Movimentação
+
+    # Arrastar e redimensionar janelas flutuantes com o mouse
+    floating_modifier $mod normal
+
+    # Alterar foco entre janelas
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Alterar o tamanho da janela
+    bindsym $mod+Ctrl+right resize grow width
+    bindsym $mod+Ctrl+down resize grow height
+    bindsym $mod+Ctrl+left resize shrink width
+    bindsym $mod+Ctrl+up resize shrink height
+
+    # Movimentar janelas 
+    bindsym $mod+Alt+Left move left
+    bindsym $mod+Alt+Down move down
+    bindsym $mod+Alt+Up move up
+    bindsym $mod+Alt+Right move right
+
+
+### Workspaces:
+
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+
+    # Move focused container to workspace
+    bindsym $mod+Alt+1 move container to workspace number 1
+    bindsym $mod+Alt+2 move container to workspace number 2
+    bindsym $mod+Alt+3 move container to workspace number 3
+    bindsym $mod+Alt+4 move container to workspace number 4
+    bindsym $mod+Alt+5 move container to workspace number 5
+    bindsym $mod+Alt+6 move container to workspace number 6
+    bindsym $mod+Alt+7 move container to workspace number 7
+    bindsym $mod+Alt+8 move container to workspace number 8
+    bindsym $mod+Alt+9 move container to workspace number 9
+    bindsym $mod+Alt+0 move container to workspace number 10
+
+### Layout stuff:
+
+    bindsym $mod+t layout tabbed 
+
+    bindsym $mod+s layout toggle split
+    bindsym $mod+k splith
+    bindsym $mod+j splitv
+
+    bindsym $mod+f fullscreen
+
+    bindsym $mod+Tab floating toggle
+
+    bindsym Alt+Tab focus mode_toggle
+
+### Scratchpad:
+
+    bindsym $mod+Alt+minus move scratchpad
+    bindsym $mod+minus scratchpad show
+

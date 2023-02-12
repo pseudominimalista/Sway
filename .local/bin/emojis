@@ -1,0 +1,253 @@
+{ brace, bracket, curly brace, curly bracket, gullwing, open curly bracket
+‾ overline, overstrike, vinculum
+_ dash, line, low dash, low line, underdash, underline
+- dash, hyphen, hyphen-minus, minus
+‐ dash, hyphen
+– dash, en
+— dash, em
+― bar, dash, horizontal bar, line
+, comma
+; semi-colon, semicolon
+: colon
+! bang, exclamation, exclamation mark, exclamation point
+¡ bang, exclamation, exclamation mark, exclamation point, inverted, inverted exclamation mark
+? question, question mark
+¿ inverted, inverted question mark, question, question mark
+‽ interabang, interrobang
+. dot, full stop, period
+… dots, ellipsis, omission
+· dot, interpunct, middle, middot
+' apostrophe, quote, single quote, typewriter apostrophe
+‘ apostrophe, left apostrophe, quote, single quote, smart quote
+’ apostrophe, quote, right apostrophe, single quote, smart quote
+‚ apostrophe, low quote, low right apostrophe, quote
+“ double quote, left quotation mark, quotation, quote, smart quotation
+” double quote, quotation, quote, right quotation mark, smart quotation
+„ double quote, low quotation, low right quotation mark, quotation, quote, smart quotation
+« angle, brackets, carets, chevron, left, left guillemet, quote
+» angle, brackets, carets, chevron, quote, right, right guillemet
+) bracket, close parenthesis, paren, parens, parenthesis, round bracket
+[ bracket, crotchet, open square bracket, square bracket
+] bracket, close square bracket, crotchet, square bracket
+} brace, bracket, close curly bracket, curly brace, curly bracket, gullwing
+§ paragraph, part, section, silcrow
+¶ alinea, paragraph, paragraph mark, paraph, pilcrow
+@ ampersat, arobase, arroba, at mark, at sign, at-sign, commercial at, strudel
+* asterisk, star, wildcard
+/ oblique, slash, solidus, stroke, virgule, whack
+\ backslash, reverse solidus, whack
+# hash, hash sign, hashtag, lb, number, pound
+% per cent, per-cent, percent
+‰ per mil, per mille, permil, permille
+† dagger, dagger sign, obelisk, obelus
+‡ dagger, double, double dagger sign, obelisk, obelus
+• bullet, dot
+′ prime
+″ double prime, prime
+‴ prime, triple prime
+` accent, grave, tone
+´ accent, acute, tone
+^ accent, caret, chevron, circumflex, control, hat, pointer, power, wedge, xor sign
+¨ diaeresis, tréma, umlaut
+° degree, hour, proof
+℗ copyright, recording, sound
+← arrow, left, left-pointing arrow
+→ arrow, right, right-pointing arrow
+↑ arrow, up, up-pointing arrow
+↓ arrow, down, down-pointing arrow
+↝ rightwards wave arrow
+↞ leftwards two headed arrow
+↠ rightwards two headed arrow
+↢ leftwards arrow tail
+↣ rightwards arrow tail
+↥ upwards arrow from bar
+↦ rightwards arrow from bar
+↧ downwards arrow from bar
+↨ up down arrow with base
+↭ left right wave arrow
+↾ barb, upwards harpoon barb rightwards
+⇉ rightwards paired arrows
+⇐ leftwards double arrow
+⇑ upwards double arrow
+⇒ rightwards double arrow
+⇓ downwards double arrow
+⇔ left right double arrow
+⇛ rightwards triple arrow
+⇞ upwards arrow double stroke
+⇟ downwards arrow double stroke
+⇥ rightwards arrow bar
+⇧ upwards hollow arrow
+⇨ rightwards hollow arrow
+⇪ upwards hollow arrow from bar
+∀ all, any, for all, given, universal
+∂ differential, partial differential
+∃ there exists
+∅ empty set, mathematics, set operator
+∆ increment, triangle
+∇ nabla, triangle
+∈ contains, element, element of, membership, set
+∉ element, not an element
+∋ contains as member, element
+∎ end proof, halmos, q.e.d., qed, tombstone
+∏ logic, n-ary product, product
+∑ mathematics, n-ary summation, summation
++ add, plus, plus sign
+± plus-minus
+÷ divide, division, division sign, obelus
+× multiplication, multiplication sign, multiply, times
+≮ inequality, mathematics, not less-than
+= equal, equals
+≠ inequality, inequation, not equal
+≯ inequality, mathematics, not greater-than
+¬ negation, not
+| bar, line, pike, pipe, sheffer stroke, stick, stroke, vbar, vertical bar, vertical line
+~ tilde
+− minus, minus sign, subtract
+∓ minus-or-plus, plus-minus
+∕ division slash, slash, stroke, virgule
+⁄ fraction slash, stroke, virgule
+∘ composition, operator, ring operator
+∙ bullet operator, operator
+√ radical, radix, root, square, surd
+∞ infinity, infinity sign
+∟ mathematics, right angle
+∣ divides, divisor
+∥ parallel
+∧ ac, atque, logical and, wedge
+∩ intersection, set
+∪ collection, set, union
+∫ calculus, integral
+∴ logic, therefore
+∵ because, logic
+∶ ratio
+∷ proportion, proportionality
+∼ operator, tilde operator
+∾ inverted lazy s
+≃ asymptote, asymptotically equal, mathematics
+≅ approximately equal, congruence, equality, isomorphism, mathematics
+≈ almost equal, approximate, approximation
+≡ exact, identical, identical to, triple
+≣ equality, mathematics, strictly equivalent
+≤ equal, equals, inequality, less-than, less-than or equal
+≥ equal, equals, greater-than, greater-than or equal, inequality
+≪ inequality, mathematics, much less-than
+≫ inequality, mathematics, much greater-than
+≬ between
+≳ greater-than equivalent, inequality, mathematics
+≺ mathematics, precedes, set operator
+≻ mathematics, set operator, succeeds
+⊂ set, subset, subset of
+⊃ mathematics, set operator, superset
+⊆ subset equal
+⊇ equality, mathematics, superset equal
+⊕ circled plus, plus
+⊖ circled minus, erosion, symmetric difference
+⊗ circled times, product, tensor
+⊘ circled division slash, division-like, mathematics
+⊙ circled dot operator, operator, XNOR
+⊛ asterisk, circled asterisk operator, operator
+⊞ addition-like, mathematics, squared plus
+⊟ mathematics, squared minus, subtraction-like
+⊥ eet, falsum, tack, up tack
+⋂ intersection, mathematics, n-ary intersection, set operator
+⋃ mathematics, n-ary union, set operator, union
+⋆ operator, star operator
+⋈ binary operator, bowtie, natural join
+⋮ ellipsis, mathematics, vertical ellipsis
+⋯ ellipsis, midline horizontal ellipsis
+⋰ ellipsis, mathematics, up right diagonal ellipsis
+⋱ down right diagonal ellipsis, ellipsis, mathematics
+■ filled square
+□ hollow square
+▬ filled rectangle
+▲ arrow, filled, filled up-pointing triangle, triangle, up
+△ hollow up-pointing triangle
+▴ filled up-pointing small triangle
+▵ hollow up-pointing small triangle
+▷ hollow right-pointing triangle
+▸ filled right-pointing small triangle
+▹ hollow right-pointing small triangle
+► filled right-pointing pointer
+▻ hollow right-pointing pointer
+▼ arrow, down, filled, filled down-pointing triangle, triangle
+▽ hollow down-pointing triangle
+▾ filled down-pointing small triangle
+▿ hollow down-pointing small triangle
+◁ hollow left-pointing triangle
+◂ filled left-pointing small triangle
+◃ hollow left-pointing small triangle
+◄ filled left-pointing pointer
+◅ hollow left-pointing pointer
+◆ filled diamond
+◇ hollow diamond
+◈ hollow diamond containing filled diamond
+◉ circled dot, concentric cicles filled, fisheye, hollow circle containing filled circle, ward
+◊ diamond, lozenge, rhombus
+○ circle, hollow circle, ring
+◌ dotted circle
+◎ concentric circles, double circle, target
+● circle, filled circle
+◐ circle left half filled
+◑ circle right half filled
+◒ circle lower half filled
+◓ circle upper half filled
+◔ circle upper right quadrant filled
+◕ circle all but upper left quadrant filled
+◖ left half filled circle
+◗ right half filled circle
+◘ inverse bullet
+◙ filled square containing hollow circle, inverse hollow circle
+◦ hollow bullet
+◯ circle, large hollow circle, ring
+♪ eighth, music, note
+♭ bemolle, flat, music, note
+♯ dièse, diesis, music, note, sharp
+☺ face, outlined, relaxed, smile, smiling face
+❤ heart, red heart
+♠ card, game, spade suit
+♥ card, game, heart suit
+♦ card, diamond suit, game
+♣ card, club suit, game
+⌨ computer, keyboard
+⚠ warning
+↗ arrow, direction, intercardinal, northeast, up-right arrow
+↘ arrow, direction, down-right arrow, intercardinal, southeast
+↙ arrow, direction, down-left arrow, intercardinal, southwest
+↖ arrow, direction, intercardinal, northwest, up-left arrow
+↕ arrow, up-down arrow
+↔ arrow, left-right arrow
+↩ arrow, right arrow curving left
+↪ arrow, left arrow curving right
+▶ arrow, play, play button, right, triangle
+◀ arrow, left, reverse, reverse button, triangle
+♀ female sign, woman
+♂ male sign, man
+‼ !, !!, bangbang, double exclamation mark, exclamation, mark
+⁉ !, !?, ?, exclamation, interrobang, mark, punctuation, question
+☑ ✓, box, check, check box with check
+© C, copyright
+® R, registered
+™ mark, TM, trade mark, trademark
+▪ black small square, geometric, square
+▫ geometric, square, white small square
+¢ cent
+$ dollar, money, peso, USD
+£ currency, EGP, GBP, pound
+¥ CNY, currency, JPY, yen, yuan
+₢ BRB, cruzeiro, currency
+₣ currency, franc, french franc
+₤ currency, lira
+₥ mil, mill
+₩ KPW, KRW, won
+€ currency, EUR, euro
+₰ currency, german penny, pfennig
+₱ peso
+₳ ARA, austral, currency
+₹ currency, indian rupee, rupee
+₽ currency, ruble
+₿ bitcoin, BTC
+₨ currency, rupee
+¹ one, superscript
+² squared, superscript, two
+³ cubed, superscript, three
+µ measure, micro sign

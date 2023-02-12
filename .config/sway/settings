@@ -1,0 +1,10 @@
+### Configurações do sway e xwayland
+
+#    xwayland disable
+    exec_always swaymsg default_border pixel 2
+    font pango:JetBrainsMono 8
+    titlebar_padding 1
+    titlebar_border_thickness 1
+    default_floating_border none
+    gaps inner 10
+

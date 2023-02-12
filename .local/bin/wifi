@@ -1,0 +1,5 @@
+#!/bin/sh
+BEMENU="bemenu -i -x -B 2 -W 0.7 -l 15 --center --tb #1e1e2e --tf #cdd6f4 --fb #11111b --ff #cdd6f4 --nb #11111b --nf #cdd6f4 --hb #1e1e2e --hf #cdd6f4 --ab #11111b --af #cdd6f4 --bdr #313244"
+bssid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | $BEMENU -p "Escolha o Wi-Fi: " -l 100 | cut -d' ' -f1)
+pass=$(echo "" | $BEMENU -x -p "Digite a senha: ")
+nmcli device wifi connect $bssid password $pass

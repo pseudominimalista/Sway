@@ -1,0 +1,11 @@
+### Inicialização de programas
+
+exec_always wlsunset -t 3500 -s 18:00 -S 5:30
+exec_always autotiling
+exec_always mako
+exec_always udiskie
+exec_always gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Mocha-Standard-Blue-Dark'
+exec_always gsettings set org.gnome.desktop.interface cursor-theme 'Catppuccin-Mocha-Dark-Cursors' 
+exec_always gsettings set org.gnome.desktop.interface icon-theme 'Catppuccin-Mocha'
+seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors
+exec blueman-applet
